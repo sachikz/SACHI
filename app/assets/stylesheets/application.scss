@@ -1,0 +1,131 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+
+
+
+$dark-gray: #606060;
+$logo-color: #475052;
+
+//universal
+
+body {
+  font-family: "Rounded Mplus 1c";
+}
+
+.container {
+  max-width: 100%;
+}
+
+.page-title {
+  margin: 50px 0;
+  text-align: center;
+}
+
+//typography
+h1 {
+  font-size: 24pt;
+  color: $dark-gray;
+}
+
+
+h2 {
+  font-size: 16pt;
+  color: $dark-gray;
+}
+
+p {
+  font-size: 10pt;
+  color: $dark-gray;
+}
+
+// header
+.nav-item {
+  margin: 0 10px;
+}
+
+// footer
+
+footer {
+  margin-top: 70px;
+  padding-top: 5px;
+  border-top: 1px solid #dcdcdc;
+  color: #808080;
+  a {
+    color: #808080;
+    &:hover {
+      color: #494949;
+      text-decoration: none;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 20px;
+      font-size: 10pt;
+    }
+  }
+}
+
+// home
+
+.home-top {
+  text-align: center;
+  background-color: $logo-color;
+  padding: 50px 0;
+}
+
+.logo-home-main {
+  width: 400px;
+  height: 400px;
+}
+
+.home-contents {
+  margin-top: 50px;
+  text-align: center;
+  h2 {
+    display: block;
+    padding-bottom: 30px;
+  }
+}
+
+// about
+
+.self-photo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.about-contents {
+  text-align: center;
+}
+
+// contents
+
+.contents-contents {
+  text-align: center;
+}
+
+.contents-cards {
+  margin-top: 50px;
+}
+
+.card {
+  text-align: left;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+// favorites
+
+.favorites-contents {
+  text-align: center;
+}
