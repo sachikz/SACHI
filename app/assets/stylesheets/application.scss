@@ -97,13 +97,22 @@ footer {
 // about
 
 .self-photo {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 50px;
+  width: 120px;
+  height: 165px;
+  margin-bottom: 30px;
 }
 
 .about-contents {
   text-align: center;
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.twitter-icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
 }
 
 // contents
@@ -128,4 +137,18 @@ footer {
 
 .favorites-contents {
   text-align: center;
+}
+
+.favorites-cards {
+  list-style: none;
+}
+
+// favorites form
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
 }

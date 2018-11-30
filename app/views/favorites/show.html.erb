@@ -1,0 +1,16 @@
+<% provide(:title, "#{@favorite.title} | sachi") %>
+<div class="page-title">
+  <h1>Favorites</h1>
+</div>
+<a href="/favorites">← Favorites 一覧に戻る</a>
+
+<%= @favorite.title %>
+<%= image_tag @favorite.picture.url if @favorite.picture? %>
+<%= @favorite.content %>
+
+<h2>コメント</h2>
+<%= render @favorite.comments %>
+
+<h2>コメントする</h2>
+<%= render 'comments/form' %>
+<a href="/favorites">← Favorites 一覧に戻る</a>

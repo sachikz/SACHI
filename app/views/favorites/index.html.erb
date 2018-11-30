@@ -1,0 +1,21 @@
+<% provide(:title, "Favorites | sachi") %>
+<div class="page-title">
+  <h1>Favorites</h1>
+</div>
+<div class="favorites-contents">
+  <p>お気に入りのモノたち。サービス、ツール、IT機器、広告、映画、本、食べ物、育児用品、などなど。</p>
+  <ol class="favorites-cards">
+    <% @favorites.each do |favorite| %>
+      <li id="favorite-<%= favorite.id %>">
+        <span class="title"><%= favorite.title %></span>
+        <span class="content"><%= favorite.content %></span>
+        <span class="picture"><%= image_tag favorite.picture.url if favorite.picture? %></span>
+        <span class="timestamp">
+          <%= time_ago_in_words(favorite.created_at) %>前に投稿
+        </span>
+        <%= link_to '詳細', favorite %>
+        <%= link_to '削除', favorite, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      </li>
+    <% end %>
+  </ol>
+</div>

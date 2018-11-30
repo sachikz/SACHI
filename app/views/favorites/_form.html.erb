@@ -1,0 +1,14 @@
+<%= form_for(@favorite) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class:'form-control' %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content, class:'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-secondary" %>
+  <span class="favorites-picture">
+    <%= f.file_field :picture %>
+  </span>
+<% end %>

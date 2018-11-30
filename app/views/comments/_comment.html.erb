@@ -1,0 +1,7 @@
+<p>ニックネーム：</p>
+<%= comment.commenter %>
+<p>コメント：</p>
+<%= simple_format comment.body %>
+<p>投稿日時</p>
+<%= comment.created_at %>
+<%= link_to '削除', [comment.favorite, comment], method: :delete, data: { confirm: "本当に削除しますか？" } %>

@@ -1,0 +1,7 @@
+<%= form_for( [@favorite, @favorite.comments.build] ) do |f| %>
+  <%= f.label :commenter, "ニックネーム" %>
+  <%= f.text_field :commenter %>
+  <%= f.label :body, "コメント" %>
+  <%= f.text_field :body %>
+  <%= f.submit "投稿" %>
+<% end %>
