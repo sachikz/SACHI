@@ -74,14 +74,12 @@ Rails.application.configure do
     host = 'sachi-introduction.herokuapp.com'
     config.action_mailer.default_url_options = { host: host }
     config.action_mailer.delivery_method = :smtp
-    name = ENV['EMAIL_ADDRESS']
-    pass = ENV['EMAIL_PASSWORD']
     config.action_mailer.smtp_settings = {
-      address:     'smtp.gmail.com',
+      address:     'smtp.sendgrid.net',
       port:        587,
-      domain:      'herokuapp.com',
-      user_name:   name,
-      password:    pass,
+      domain:      'heroku.com',
+      user_name:   ENV['SENDGRID_USERNAME'],
+      password:    ENV['SENDGRID_PASSWORD'],
       authentication:  'plain',
       enable_starttls_auto: true,
     }
