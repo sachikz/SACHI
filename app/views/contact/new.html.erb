@@ -3,7 +3,7 @@
   <h1>Contact</h1>
 </div>
 <div class="contact-contents">
-  <%= form_for(@contact, url: { action: :check }) do |f| %>
+  <%= form_for @contact do |f| %>
     <% if @contact.errors.any? %>
       <div class="alert alert-danger" role="alert">
         <strong>入力内容にエラーがあります</strong>
