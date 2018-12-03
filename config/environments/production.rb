@@ -73,14 +73,15 @@ Rails.application.configure do
     host = 'sachi-introduction.herokuapp.com'
     config.action_mailer.default_url_options = { host: host }
     config.action_mailer.delivery_method = :smtp
-    ActionMailer::Base.smtp_settings = {
+    config.action_mailer.smtp_settings = {
       address:     'smtp.gmail.com',
       port:        587,
       domain:      'herokuapp.com',
       user_name:   ENV['EMAIL_ADDRESS'],
       password:    ENV['EMAIL_PASSWORD'],
       authentication:  'plain',
-      enable_starttls_auto: true
+      enable_starttls_auto: true,
+      tls: true
     }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
