@@ -78,7 +78,7 @@ Rails.application.configure do
       port:        587,
       domain:      'herokuapp.com',
       user_name:   ENV['EMAIL_ADDRESS'],
-      password:    'fkbzmirrxzithhjk',
+      password:    ENV['EMAIL_PASSWORD'],
       authentication:  'plain',
       enable_starttls_auto: true,
     }
