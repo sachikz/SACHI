@@ -5,7 +5,7 @@
   <p>入力内容を確認し、よろしければ送信ボタンをクリックしてください。</p>
 </div>
 <div class="contact-contents">
-  <%= form_for @contact, url: contact_thanks_path do |f| %>
+  <%= form_with model: @contact, url: contact_thanks_path, local: true do |f| %>
     <%= f.hidden_field :name %>
     <%= @contact.name %>
 
