@@ -6,15 +6,23 @@
 </div>
 <div class="contact-contents">
   <%= form_with model: @contact, url: contact_thanks_path, local: true do |f| %>
-    <%= f.hidden_field :name %>
-    <%= @contact.name %>
-
-    <%= f.hidden_field :email %>
-    <%= @contact.email %>
-
-    <%= f.hidden_field :message %>
-    <%= simple_format(@contact.message) %>
-
-    <%= f.submit '送信', class: 'btn btn-secondary' %>
+    <div class="form-group">
+      <span>Name：</span>
+      <%= f.hidden_field :name %>
+      <%= @contact.name %>
+    </div>
+    <div class="form-group">
+      <span>Email：</span>
+      <%= f.hidden_field :email %>
+      <%= @contact.email %>
+    </div>
+    <div class="form-group">
+      <span>Message：</span><br>
+      <%= f.hidden_field :message %>
+      <%= simple_format(@contact.message) %>
+    </div>
+    <div class="btn-common">
+      <%= f.submit '送信', class: 'btn btn-secondary' %>
+    </div>
   <% end %>
 </div>

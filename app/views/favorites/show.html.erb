@@ -2,15 +2,22 @@
 <div class="page-title">
   <h1>Favorites</h1>
 </div>
-<a href="/favorites">← Favorites 一覧に戻る</a>
-
-<%= @favorite.title %>
-<%= image_tag @favorite.picture.url if @favorite.picture? %>
-<%= @favorite.content %>
-
-<h2>コメント</h2>
-<%= render @favorite.comments %>
-
-<h2>コメントする</h2>
-<%= render 'comments/form' %>
-<a href="/favorites">← Favorites 一覧に戻る</a>
+<div class="favorites-show">
+  <%= link_to '◀︎ 戻る', favorites_path, class: "link-to-favorites" %>
+  <div class="fa-show-main">
+    <h2 class="fa-show-title"><%= @favorite.title %></h2>
+    <div class="fa-show-picture"><%= image_tag(@favorite.picture.url) %></div>
+    <p class="fa-show-content"><%= simple_format(@favorite.content) %></p>
+  </div>
+  <%= link_to '削除', @favorite, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "favorite-delete" %>
+  <div class="fa-show-comments">
+    <h2 class="fa-show-comment-title">コメント</h2>
+    <div class="fa-show-comment-contents">
+      <%= render @favorite.comments %>
+    </div>
+    <div class="fa-show-comment-form">
+      <%= render 'comments/form' %>
+    </div>
+  </div>
+  <%= link_to '◀︎ 戻る', favorites_path, class: "link-to-favorites" %>
+</div>

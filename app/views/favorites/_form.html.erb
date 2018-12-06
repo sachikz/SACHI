@@ -1,14 +1,17 @@
 <%= form_with model: @favorite, local: true do |f| %>
-  <%= render 'shared/error_messages' %>
-
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %>
-
-  <%= f.label :content %>
-  <%= f.text_field :content, class: 'form-control' %>
-
-  <%= f.submit yield(:button_text), class: 'btn btn-secondary' %>
-  <span class="favorites-picture">
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+  <div class="form-group">
     <%= f.file_field :picture %>
-  </span>
+  </div>
+  <div class="btn-common">
+    <%= f.submit yield(:button_text), class: 'btn btn-secondary' %>
+  </div>
 <% end %>

@@ -3,16 +3,19 @@
   <h1>About</h1>
 </div>
 <div class="about-contents">
-  <%= image_tag('self_photo.jpg', :class => "self-photo",
-      :oncontextmenu => "return false;", :onselectstart => "return false;", :onmousedown => "return false;") %>
-  <h2>さち</h2>
-  <p>2018年8月〜趣味でプログラミングを始めました。主にRubyとJavaScriptを勉強中です。</p>
-  <p>東京在住、アラサー。広告制作会社に勤務しています。</p>
-  <p>単発的なプロモーションのWebサイト/動画制作のPMを4年ほどやっていました。</p>
-  <p>第一子出産後、制作現場から離れ情シスへ。現在1歳、2歳の子供がいます。</p>
-  <p>にわか情シスを卒業すべく、育休中にITパスポートと基本情報技術者を取得。</p>
-  <p>好きなものは、広告、映画、カメラ、IT機器。</p>
-  <%# <%= link_to 'https://twitter.com/sachi_180822', target: "_blank" do %>
-    <%# <%= image_tag('twitter_icon.png', :class => "twitter-icon") %>
-  <%# <% end %>
+  <div class="self-photo">
+    <%= image_tag('self_photo.jpg', :class => "self-photo-image",
+        :oncontextmenu => "return false;", :onselectstart => "return false;", :onmousedown => "return false;") %>
+  </div>
+  <div class="introduction">
+    <h2>さち</h2>
+    <p>1989年生まれ。もうすぐ30歳。東京在住。</p>
+    <p>2018年8月〜プログラミングを始めました。主にRubyとJavaScriptを勉強中です。</p>
+    <p>広告制作会社に勤務しています。単発的なプロモーションのWebサイト/動画制作のPMを4年ほどやっていました。
+      出産後、制作現場から離れ情シスへ。にわか情シスを卒業すべく、育休中にITパスポートと基本情報技術者を取得しました。</p>
+    <p>好きなものは、広告、映画、カメラ。</p>
+    <%# <%= link_to 'https://twitter.com/sachi_180822', target: "_blank" do %>
+      <%# <%= image_tag('twitter_icon.png', :class => "twitter-icon") %>
+    <%# <% end %>
+  </div>
 </div>

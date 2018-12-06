@@ -1,7 +1,7 @@
-<p>ニックネーム：</p>
-<%= comment.commenter %>
-<p>コメント：</p>
-<%= simple_format comment.body %>
-<p>投稿日時</p>
-<%= comment.created_at %>
-<%= link_to '削除', [comment.favorite, comment], method: :delete, data: { confirm: "本当に削除しますか？" } %>
+<p class="comment-commenter"><%= comment.commenter %></p>
+<div class="comment-body">
+  <p class="comment-text"><%= simple_format(comment.body) %></p>
+  <p class="comment-date"><%= comment.created_at %></p>
+</div>
+<%= link_to '-', [comment.favorite, comment], method: :delete,
+  data: { confirm: "本当に削除しますか？" }, class: "comment-delete" %>

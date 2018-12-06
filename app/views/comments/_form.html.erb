@@ -1,7 +1,13 @@
 <%= form_for( [@favorite, @favorite.comments.build] ) do |f| %>
-  <%= f.label :commenter, "ニックネーム" %>
-  <%= f.text_field :commenter %>
-  <%= f.label :body, "コメント" %>
-  <%= f.text_field :body %>
-  <%= f.submit "投稿" %>
+  <div class="form-group">
+    <%= f.label :commenter, "ニックネーム" %>
+    <%= f.text_field :commenter, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, "コメント" %>
+    <%= f.text_area :body, class: 'form-control' %>
+  </div>
+  <div class="btn-comment">
+    <%= f.submit "投稿", class: 'btn btn-secondary' %>
+  </div>
 <% end %>
