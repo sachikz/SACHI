@@ -115,20 +115,22 @@ footer {
 }
 
 .home-menu {
-  margin: 40px 50px 0 50px;
+  margin: 30px 100px;
 }
 
 .menu-list {
   display: block;
-  font-size: 11pt;
+  width: 150px;
+  margin: 20px auto;
+  font-size: 10pt;
   font-family: 'Montserrat', sans-serif;
   background-color: $blue;
-  text-align: center;
   padding: 15px 0;
-  margin: 20px 20px;
   border-radius: 5px;
   color: $dark-gray;
   text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   &:hover {
     color: $dark-gray;
     text-decoration: none;
@@ -145,11 +147,15 @@ footer {
 .about-contents {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 30px;
   h2 {
     margin-bottom: 30px;
   }
-  h2, p, .self-photo {
+  h2, .self-photo {
     text-align: center;
+  }
+  p {
+    text-align: left;
   }
   .self-photo-image {
     width: 120px;
