@@ -115,7 +115,7 @@ footer {
 }
 
 .home-menu {
-  margin: 30px 80px;
+  margin: 40px 80px;
 }
 
 .menu-list {
@@ -335,6 +335,12 @@ footer {
 }
 
 // contact
+
+.contact-contents {
+  h2, p {
+    text-align: center;
+  }
+}
 
 .thanks-image {
   text-align: center;
