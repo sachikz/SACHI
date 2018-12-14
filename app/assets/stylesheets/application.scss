@@ -112,11 +112,16 @@ footer {
     display: block;
     padding-bottom: 30px;
   }
+  .home-message {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .home-menu {
+    margin: 40px 80px;
+  }
 }
 
-.home-menu {
-  margin: 40px 80px;
-}
+
 
 .menu-list {
   display: block;
@@ -162,13 +167,16 @@ footer {
     height: 142px;
     margin-bottom: 30px;
   }
+  .twitter {
+    text-align: center;
+    margin-top: 30px;
+    .twitter-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
-.twitter-icon {
-  width: 30px;
-  height: 30px;
-  margin-top: 20px;
-}
 
 // contents
 

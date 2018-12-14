@@ -4,7 +4,7 @@
 </div>
 <div class="about-contents">
   <div class="self-photo">
-    <%= image_tag('self_photo.jpg', :class => "self-photo-image",
+    <%# <%= image_tag('self_photo.jpg', :class => "self-photo-image",
         :oncontextmenu => "return false;", :onselectstart => "return false;", :onmousedown => "return false;") %>
     <h2>さち</h2>
   </div>
@@ -13,8 +13,10 @@
     <p>広告制作会社に勤務しています。単発的なプロモーションのWebサイト/動画制作のPMを4年ほどやっていました。
       出産後、制作現場を離れて情シスへ。にわか情シスを卒業すべく、育休中にITパスポートと基本情報技術者を取得。</p>
     <p>好きなものは、広告、カメラ、映画、パン。</p>
-    <%# <%= link_to 'https://twitter.com/sachi_180822', target: "_blank" do %>
-      <%# <%= image_tag('twitter_icon.png', :class => "twitter-icon") %>
-    <%# <% end %>
+  </div>
+  <div class="twitter">
+    <%= link_to 'https://twitter.com/sachi_180822', target: "_blank" do %>
+      <%= image_tag('twitter_icon.png', :class => "twitter-icon") %>
+    <% end %>
   </div>
 </div>
